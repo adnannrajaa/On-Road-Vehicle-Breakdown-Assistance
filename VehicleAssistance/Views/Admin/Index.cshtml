@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+}
+
+<div class="nav-wrapper" style="margin-bottom:30px">
+    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">Customers Feedback</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">Mechanics Feedback</a>
+        </li>
+    </ul>
+</div>
+
+
+@*<div class="row">
+    <div class="col-md-12 alert alert-primary">
+        There is no feedback to show.
+    </div>
+</div>*@
+
+
+
+
+
+
+
+<div id="dataRow" hidden>
+    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">
+        <span id="fullname"></span>
+    </a>
+    <p id="feedback" style="margin-left:16px">
+    </p>
+</div>
+
+<div id="dataRow1" hidden>
+    <a class="nav-link mb-sm-3 mb-md-0 " id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">
+        <span id="fullnameM"></span>
+    </a>
+    <p id="feedbackM" style="margin-left:16px">
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+            </div>
+
+            <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#feedBack").addClass("active");
+        });
+    </script>
+    <script src="~/CustomFiles/js/Admin/get-all-users-feedback.js"></script>
+}
+
+

@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "View Requests";
+}
+
+
+<div class="content" style="margin-top:10px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">View Requests</h4>
+                </div>
+
+                <div class="card-body">
+                    <table class="table" id="tableData">
+                        <thead class="text-primary">
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    First Name
+                                </th>
+                                <th>
+                                    Last Name
+                                </th>
+                                <th>
+                                    Car Type
+                                </th>
+                                <th>
+                                    Mobile
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+
+                            <tr hidden id="dataRow">
+                                <td id="No"></td>
+                                <td id="firstName"></td>
+                                <td id="lastName"></td>
+                                <td id="carType"></td>
+                                <td id="mobile"></td>
+                                <td id="Action">
+                                    <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="tabs-text" role="tablist">
+                                        <li id="feedback" class="nav-item">
+                                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Feedback</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="myModalLabel">Feedback</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <label id="myPrescriptionId" hidden></label>
+                    <label>Feedback Detail</label>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="10" cols="40" id="feedback-detail"></textarea>
+                    </div>
+                    <label id="showError" style="color:red" hidden>Feedback detail is required</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left-side">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                </div>
+                <div class="divider"></div>
+                <div class="right-side">
+                    <button id="saveFeedBackButton" type="button" class="btn btn-success btn-simple">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    end modal -->
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#viewRequests").addClass("active");
+        });
+    </script>
+<script src="~/CustomFiles/js/Mechanic/view-customer-requests.js"></script>
+
+}

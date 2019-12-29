@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Mechanics";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Mechanics</h4>
+        </div>
+        <div class="card-body">
+            <table class="table" id="tableData">
+                <thead class="text-primary">
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Full Name
+                        </th>
+                        <th>
+                            User Name
+                        </th>
+                        <th>
+                           Location
+                        </th>
+                        <th>
+                            Mobile
+                        </th>
+                        <th>
+                           Action
+                        </th>
+                    </tr>
+                    
+                    <tr hidden id="dataRow">
+                        <td id="No"></td>
+                        <td id="fullName"></td>
+                        <td id="userName"></td>
+                        <td id="Location"></td>
+                        <td id="mobile"></td>
+                        <td id="Action">
+                            <button id="block" title='Block' class='btn btn-sm btn-outline-warning btn-icon'><i class='nc-icon nc-button-power'></i></button>
+                            <button id="active" title='Active' class='btn btn-sm btn-outline-success btn-icon'><i class='nc-icon nc-button-power'></i></button>
+                        </td>
+                    </tr>
+
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#mechanics").addClass("active");
+        });
+    </script>
+<script src="~/CustomFiles/js/Admin/get-all-mechanics.js"></script>
+}
